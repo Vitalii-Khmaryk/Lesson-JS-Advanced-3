@@ -1,0 +1,16 @@
+<div class="container">
+  <header>
+    <p class="text">Plan your day!</p>
+    <p class="text">
+      User:Ivan Ivanov.Count of task <span>{{ count }}</span>
+    </p>
+    <hr />
+    <input type="text" [(ngModel)]="nameTask" [placeholder]="place" />
+    <button (click)="addTask()" class="addBtn">Add</button>
+  </header>
+  <app-child
+    [nameTask]="childnameTask"
+    [taskMass]="childTaskMass"
+    (fromChild)="getCount($event)"
+  ></app-child>
+</div>
